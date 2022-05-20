@@ -1,0 +1,11 @@
+<schema>
+ <structures>
+  <structure name="CUSTOMERS" type="TABLE">
+    <column name="ID" type="INTEGER" primaryKey="true" identity="true"></column>
+    <column name="COMPANY_NAME" type="VARCHAR" length="64"></column>
+    <column name="COUNTRY" type="VARCHAR" length="64"></column>
+    <column name="CITY" type="VARCHAR" length="64"></column>
+  </structure>
+ </structures>
+ <mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="2" style="table" vertex="1" parent="1"><Table name="CUSTOMERS" type="TABLE" as="value"/><mxGeometry x="130" y="130" width="200" height="132" as="geometry"><mxRectangle width="200" height="28" as="alternateBounds"/></mxGeometry></mxCell><mxCell id="3" vertex="1" connectable="0" parent="2"><Column name="ID" type="INTEGER" columnLength="0" primaryKey="true" autoIncrement="true" as="value"/><mxGeometry y="28" width="200" height="26" as="geometry"/></mxCell><mxCell id="4" vertex="1" connectable="0" parent="2"><Column name="COMPANY_NAME" columnLength="64" as="value"/><mxGeometry y="54" width="200" height="26" as="geometry"/></mxCell><mxCell id="5" vertex="1" connectable="0" parent="2"><Column name="COUNTRY" columnLength="64" as="value"/><mxGeometry y="80" width="200" height="26" as="geometry"/></mxCell><mxCell id="6" vertex="1" connectable="0" parent="2"><Column name="CITY" columnLength="64" as="value"/><mxGeometry y="106" width="200" height="26" as="geometry"/></mxCell></root></mxGraphModel>
+</schema>

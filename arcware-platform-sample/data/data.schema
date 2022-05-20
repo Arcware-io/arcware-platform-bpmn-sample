@@ -1,0 +1,60 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "CUSTOMERS",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "name": "ID",
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "primaryKey": "true",
+                        "identity": "true",
+                        "unique": false,
+                        "defaultValue": null,
+                        "precision": null,
+                        "scale": null
+                    },
+                    {
+                        "name": "COMPANY_NAME",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "nullable": true,
+                        "primaryKey": false,
+                        "identity": false,
+                        "unique": false,
+                        "defaultValue": null,
+                        "precision": null,
+                        "scale": null
+                    },
+                    {
+                        "name": "COUNTRY",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "nullable": true,
+                        "primaryKey": false,
+                        "identity": false,
+                        "unique": false,
+                        "defaultValue": null,
+                        "precision": null,
+                        "scale": null
+                    },
+                    {
+                        "name": "CITY",
+                        "type": "VARCHAR",
+                        "length": "64",
+                        "nullable": true,
+                        "primaryKey": false,
+                        "identity": false,
+                        "unique": false,
+                        "defaultValue": null,
+                        "precision": null,
+                        "scale": null
+                    }
+                ]
+            }
+        ]
+    }
+}
