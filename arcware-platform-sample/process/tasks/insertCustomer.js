@@ -3,11 +3,7 @@ const customersDao = require("arcware-platform-sample/data/customersDao");
 
 let customer = getCustomerFromContext();
 
-customersDao.insert({
-    companyName: customer.CompanyName,
-    country: customer.Country,
-    city: customer.City
-});
+customersDao.insert(customer);
 
 function getCustomerFromContext() {
     let execution = process.getExecutionContext();
