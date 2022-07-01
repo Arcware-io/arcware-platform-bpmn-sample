@@ -1,1 +1,0 @@
-{"expression":"0/10 * * * * ?","group":"dirigible-defined","handler":"arcware-platform-sample/process/trigger.js","description":"Customers Sync Job","parameters":[]}

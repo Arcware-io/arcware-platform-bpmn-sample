@@ -2,7 +2,7 @@
     "schema": {
         "structures": [
             {
-                "name": "CUSTOMERS",
+                "name": "RECORDS",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -18,9 +18,9 @@
                         "scale": null
                     },
                     {
-                        "name": "COMPANY_NAME",
+                        "name": "PROPERTY1",
                         "type": "VARCHAR",
-                        "length": "64",
+                        "length": 64,
                         "nullable": true,
                         "primaryKey": false,
                         "identity": false,
@@ -30,9 +30,9 @@
                         "scale": null
                     },
                     {
-                        "name": "COUNTRY",
+                        "name": "PROPERTY2",
                         "type": "VARCHAR",
-                        "length": "64",
+                        "length": 64,
                         "nullable": true,
                         "primaryKey": false,
                         "identity": false,
@@ -42,9 +42,9 @@
                         "scale": null
                     },
                     {
-                        "name": "CITY",
+                        "name": "PROPERTY3",
                         "type": "VARCHAR",
-                        "length": "64",
+                        "length": 64,
                         "nullable": true,
                         "primaryKey": false,
                         "identity": false,

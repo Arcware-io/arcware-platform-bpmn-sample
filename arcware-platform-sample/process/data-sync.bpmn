@@ -1,36 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.flowable.org/processdef" exporter="Flowable Open Source Modeler" exporterVersion="6.7.2">
-  <process id="customers-sync" name="Customers - Sync" isExecutable="true">
+  <process id="data-sync" name="Data - Sync" isExecutable="true">
     <startEvent id="sid-3334E861-7999-4B89-B8B0-11724BA17A3E"/>
-    <serviceTask id="getCustomers" name="Get Customers" flowable:class="org.eclipse.dirigible.bpm.flowable.DirigibleCallDelegate">
+    <serviceTask id="getCustomers" name="Get Data" flowable:class="org.eclipse.dirigible.bpm.flowable.DirigibleCallDelegate">
       <extensionElements>
         <flowable:field name="handler">
-          <flowable:string><![CDATA[arcware-platform-sample/process/tasks/getCustomers.js]]></flowable:string>
+          <flowable:string><![CDATA[arcware-platform-sample/process/tasks/getData.js]]></flowable:string>
         </flowable:field>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="sid-797626AE-B2F6-4C00-ABEE-FB30ADC177E4" sourceRef="sid-3334E861-7999-4B89-B8B0-11724BA17A3E" targetRef="getCustomers"/>
     <endEvent id="sid-70B488C1-384A-4E19-8091-1B12D1AEC7FD"/>
-    <serviceTask id="selectRandomCustomer" name="Select Random Customer" flowable:class="org.eclipse.dirigible.bpm.flowable.DirigibleCallDelegate">
+    <serviceTask id="selectRandomCustomer" name="Select Random Record" flowable:class="org.eclipse.dirigible.bpm.flowable.DirigibleCallDelegate">
       <extensionElements>
         <flowable:field name="handler">
-          <flowable:string><![CDATA[arcware-platform-sample/process/tasks/selectRandomCustomer.js]]></flowable:string>
+          <flowable:string><![CDATA[arcware-platform-sample/process/tasks/selectRandomRecord.js]]></flowable:string>
         </flowable:field>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="sid-645847E8-C959-48BD-816B-2E9CC4A2F08A" sourceRef="getCustomers" targetRef="selectRandomCustomer"/>
-    <serviceTask id="insertCustomer" name="Insert Customer" flowable:class="org.eclipse.dirigible.bpm.flowable.DirigibleCallDelegate">
+    <serviceTask id="insertCustomer" name="Insert Data" flowable:class="org.eclipse.dirigible.bpm.flowable.DirigibleCallDelegate">
       <extensionElements>
         <flowable:field name="handler">
-          <flowable:string><![CDATA[arcware-platform-sample/process/tasks/insertCustomer.js]]></flowable:string>
+          <flowable:string><![CDATA[arcware-platform-sample/process/tasks/insertData.js]]></flowable:string>
         </flowable:field>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="sid-707D6D4E-2C98-4777-9A98-BF54AAD5EEE7" sourceRef="insertCustomer" targetRef="sid-70B488C1-384A-4E19-8091-1B12D1AEC7FD"/>
     <sequenceFlow id="sid-F42200F3-236F-49D9-801E-12220386ACB8" sourceRef="selectRandomCustomer" targetRef="insertCustomer"/>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_customers-sync">
-    <bpmndi:BPMNPlane bpmnElement="customers-sync" id="BPMNPlane_customers-sync">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_data-sync">
+    <bpmndi:BPMNPlane bpmnElement="data-sync" id="BPMNPlane_data-sync">
       <bpmndi:BPMNShape bpmnElement="sid-3334E861-7999-4B89-B8B0-11724BA17A3E" id="BPMNShape_sid-3334E861-7999-4B89-B8B0-11724BA17A3E">
         <omgdc:Bounds height="30.0" width="30.0" x="103.0" y="78.0"/>
       </bpmndi:BPMNShape>
